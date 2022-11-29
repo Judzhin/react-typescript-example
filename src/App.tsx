@@ -1,15 +1,14 @@
-import React, { createElement as e } from 'react';
+import React from "react";
+import { Product } from "./components/Product";
+import { products } from "./data/products";
 
 function App() {
-    // return (
-    //     <div>Hello World!!!!</div>
-    // );
-
-    // return React.createElement('h1', {}, 'Hello Element!!!');
-    return e('div', {className: 'container'}, [
-        e('h1', {className: 'font-bold'}, 'Test JSX'),
-        e('button', {className: ''}, 'Click me!')
-    ]);
+  return (
+    <div className="container mx-auto max-w-2xl pt-5">
+      <Product key={products[0].id} product={products[0]} />
+      <Product key={products[1].id} product={products[1]} />
+    </div>
+  );
 }
 
 export default App;
