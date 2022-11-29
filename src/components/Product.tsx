@@ -8,12 +8,12 @@ interface ProductProps {
 // export function Product(props: ProductProps) {
 export function Product({ product }: ProductProps) {
   const [detail, setDetail] = useState(false);
-  const bttnClassNames = [
+  const bttnClassNames: string[] = [
     "py-2", // default
     "px-4", // default
     "border", // default
     detail ? "bg-yellow-400" : "bg-blue-400", // toggle background class color
-  ].join(" ");
+  ];
 
   return (
     <div className="border py-2 px-4 rounded flex flex-col items-center mb-2">
@@ -24,7 +24,7 @@ export function Product({ product }: ProductProps) {
 
       <button
         // className="py-2 px-4 border bg-yellow-400"
-        className={bttnClassNames}
+        className={bttnClassNames.join(" ")}
         // onClick={() => setDetail(true)}
         onClick={() => setDetail((prev) => !prev)}
       >
