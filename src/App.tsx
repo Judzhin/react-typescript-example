@@ -45,15 +45,15 @@ function App() {
             {/*<Product key={products[1].id} product={products[1]}/>*/}
 
             {/*{isLoading && <div className={'text-center'}>Loading...</div>}*/}
-            {isLoading && <Loader />}
+            {isLoading && <Loader/>}
 
             {products.map(product => <Product product={product} key={product.id}/>)}
 
             {/*{error && <div className='text-center text-red-600'>{error}</div>}*/}
-            {error && <ErrorMessage error={error} />}
+            {error && <ErrorMessage error={error}/>}
 
             <Modal title={"Create new Product"}>
-                <CreateProduct />
+                <CreateProduct/>
             </Modal>
         </div>
     );
