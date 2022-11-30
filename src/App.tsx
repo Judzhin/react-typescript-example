@@ -6,6 +6,8 @@ import {Product} from "./components/Product";
 import {useProducts} from "./hooks/products";
 import Loader from "./components/Loader";
 import ErrorMessage from "./components/ErrorMessage";
+import Modal from "./components/Modal";
+import CreateProduct from "./components/CreateProduct";
 
 function App() {
 
@@ -49,6 +51,10 @@ function App() {
 
             {/*{error && <div className='text-center text-red-600'>{error}</div>}*/}
             {error && <ErrorMessage error={error} />}
+
+            <Modal title={"Create new Product"}>
+                <CreateProduct />
+            </Modal>
         </div>
     );
 }
